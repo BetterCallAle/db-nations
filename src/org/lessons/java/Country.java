@@ -25,17 +25,7 @@ public class Country {
     }
 
     public String getLanguages(){
-        String languages = null;
-
-        for (int i = 0; i < this.languages.size() ; i++) {
-            if (i == 0) {
-                languages = this.languages.get(i)  + ", ";
-            } else if (i == (this.languages.size() - 1)) {
-                languages += this.languages.get(i);
-            } else {
-                languages += this.languages.get(i) + ", ";
-            }
-        }
+        String languages = String.join(", ", this.languages);
 
         return languages;
     }
